@@ -32,7 +32,7 @@ const Header = () => {
             {/* Instagram link with line effect */}
             <motion.div className="relative group">
               <motion.div className="  w-fit leading-5 cursor-pointer">
-                instagram
+                Instagram
               </motion.div>
               <motion.div className="absolute left-0 h-[2px] bg-black w-0 transition-all duration-300 group-hover:w-full" />
             </motion.div>
@@ -40,7 +40,7 @@ const Header = () => {
             {/* Facebook link with line effect */}
             <motion.div className="relative group">
               <motion.div className=" w-fit leading-5 cursor-pointer">
-                facebook
+                Facebook
               </motion.div>
               <motion.div className="absolute left-0 h-[2px] bg-black w-0 transition-all duration-300 group-hover:w-full" />
             </motion.div>
@@ -64,7 +64,7 @@ const Header = () => {
           duration: 1, // Increased duration for a slower animation
           ease: "easeInOut", // Predefined easing for smoother effect
         }}
-        className="xl:hidden justify-between items-start font-[700] flex"
+        className="xl:hidden justify-between items-start font-[700] flex border-b-[1px] border-gray-500 pb-[20px]"
       >
         <motion.div className="cursor-pointer">
           <Logo />
