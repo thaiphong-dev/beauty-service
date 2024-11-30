@@ -1,12 +1,12 @@
 import React from "react";
-import * as notion from "framer-motion/client";
+import * as motion from "framer-motion/client";
 import { Bodoni_Moda } from "next/font/google";
 const bodoni_Moda = Bodoni_Moda({ subsets: ["latin"], weight: "400" });
 
 const BannerForMO = () => {
   return (
     <>
-      <notion.div
+      <motion.div
         initial={{ opacity: 0, y: -100 }} // Start above the viewport
         animate={{ opacity: 1, y: 0 }} // Move into view
         exit={{ opacity: 0, y: -100 }} // Move back up when exiting
@@ -19,9 +19,9 @@ const BannerForMO = () => {
         <p>Pro Nails</p>
         <p>&Beauty</p>
         <p>Studio</p>
-      </notion.div>
+      </motion.div>
       <div className="flex justify-center items-center flex-col space-y-[20px] mt-[10px] text-center">
-        <notion.div
+        <motion.div
           initial={{ opacity: 0 }} // Start with no opacity
           animate={{ opacity: 1 }} // Fade in to full opacity
           exit={{ opacity: 0 }} // Fade out to no opacity when exiting
@@ -33,8 +33,8 @@ const BannerForMO = () => {
         >
           We offer a complete range of beauty treatments for nails, hair, face
           and body - allowing you shine even brighter
-        </notion.div>
-        <notion.div
+        </motion.div>
+        <motion.div
           initial={{ opacity: 0 }} // Start with no opacity
           animate={{ opacity: 1 }} // Fade in to full opacity
           exit={{ opacity: 0 }} // Fade out to no opacity when exiting
@@ -47,7 +47,7 @@ const BannerForMO = () => {
           <div className="w-[140px] aspect-square flex justify-center items-center text-center uppercase font-[500] group-hover:border-[2px] group-hover:border-white rounded-full transition-all duration-0 text-[15px] leading-normal font-[500]">
             <p>make an appointment</p>
           </div>
-        </notion.div>
+        </motion.div>
       </div>
     </>
   );

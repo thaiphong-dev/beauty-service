@@ -1,13 +1,13 @@
 import React from "react";
-import * as notion from "framer-motion/client";
+import * as motion from "framer-motion/client";
 import { Bodoni_Moda } from "next/font/google";
 
 const bodoni_Moda = Bodoni_Moda({ subsets: ["latin"], weight: "400" });
 
 const ThirtLine = () => {
   return (
-    <notion.div className="flex justify-between items-end">
-      <notion.div
+    <motion.div className="flex justify-between items-end">
+      <motion.div
         initial={{ opacity: 0 }} // Start with no opacity
         animate={{ opacity: 1 }} // Fade in to full opacity
         exit={{ opacity: 0 }} // Fade out to no opacity when exiting
@@ -19,9 +19,9 @@ const ThirtLine = () => {
       >
         We offer a complete range of beauty treatments for nails, hair, face and
         body - allowing you shine even brighter
-      </notion.div>
+      </motion.div>
 
-      <notion.div
+      <motion.div
         className={`${bodoni_Moda.className} text-[220px] relative right-[-50px]  h-[200px]`}
         initial={{ opacity: 0, x: 100 }} // Start above the viewport
         animate={{ opacity: 1, x: 0 }} // Move into view
@@ -32,8 +32,8 @@ const ThirtLine = () => {
         }}
       >
         Studio
-      </notion.div>
-    </notion.div>
+      </motion.div>
+    </motion.div>
   );
 };
 export default ThirtLine;

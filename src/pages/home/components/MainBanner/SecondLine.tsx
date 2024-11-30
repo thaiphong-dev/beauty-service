@@ -1,15 +1,15 @@
 import React from "react";
-import * as notion from "framer-motion/client";
+import * as motion from "framer-motion/client";
 import { Bodoni_Moda } from "next/font/google";
 
 const bodoni_Moda = Bodoni_Moda({ subsets: ["latin"], weight: "400" });
 
 const SecondLine = () => {
   return (
-    <notion.div className="flex justify-between items-end">
+    <motion.div className="flex justify-between items-end">
       <div className="text-gray-500 text-[13px] relative top-[50px]">2024</div>
 
-      <notion.div
+      <motion.div
         className={`${bodoni_Moda.className} text-[220px] relative h-[210px]`}
         initial={{ opacity: 0, y: 100 }} // Start above the viewport
         animate={{ opacity: 1, y: 0 }} // Move into view
@@ -20,11 +20,11 @@ const SecondLine = () => {
         }}
       >
         <span className="inline-block relative top-[-60px]">&</span>Beauty
-      </notion.div>
+      </motion.div>
       <div className="text-gray-500 text-[13px] relative top-[50px]">
         Beauty
       </div>
-    </notion.div>
+    </motion.div>
   );
 };
 export default SecondLine;
