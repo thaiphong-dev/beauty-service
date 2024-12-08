@@ -29,114 +29,222 @@ const MainStory = () => {
   ];
 
   return (
-    <div className="mt-[200px] pb-[100px]">
-      {/* story header  */}
-      <div>
-        <motion.div
-          initial={{ opacity: 0, x: -100 }} // Start above the viewport
-          whileInView={{ opacity: 1, x: 0 }} // Move into view
-          exit={{ opacity: 0, x: -100 }} // Move back up when exiting
-          transition={{
-            duration: 1, // Increased duration for a slower animation
-            ease: "easeInOut", // Predefined easing for smoother effect
-          }}
-          viewport={{ once: true }}
-          className="flex justify-start items-end relative space-x-[100px]"
-        >
-          <div className="inline-block relative text-end text-gray-500">
-            Our Story
-          </div>
-          <div
-            className={`uppercase text-[80px] h-[90px] ${bodoni_Moda.className}`}
-          >
-            from nail studio
-          </div>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, x: 100 }} // Start above the viewport
-          whileInView={{ opacity: 1, x: 0 }} // Move into view
-          exit={{ opacity: 0, x: 100 }} // Move back up when exiting
-          transition={{
-            duration: 1, // Increased duration for a slower animation
-            ease: "easeInOut", // Predefined easing for smoother effect
-          }}
-          viewport={{ once: true }}
-          className="relative left-[40%] w-fit"
-        >
-          <div>
-            <p className={`uppercase text-[80px] ${bodoni_Moda.className}`}>
-              to beauty cave
-            </p>
-          </div>
-        </motion.div>
-      </div>
-
-      {/* story list  */}
-      <div className="flex justify-center items-center w-full ">
-        <div className="block w-[1100px]">
-          {mockStories?.map((story, index) => {
-            return (
-              <SingleStory
-                key={index}
-                content={story.content}
-                count={index + 1}
-                title={story.title}
-              />
-            );
-          })}
-        </div>
-      </div>
-
-      <div className=" w-full flex justify-center items-center text-center">
-        <div className={`${bodoni_Moda.className} min-h-[200px]`}>
+    <>
+      {/* ui for PC */}
+      <div className="mt-[200px] pb-[100px] xl:block hidden">
+        {/* story header  */}
+        <div>
           <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, x: -100 }} // Start above the viewport
+            whileInView={{ opacity: 1, x: 0 }} // Move into view
+            exit={{ opacity: 0, x: -100 }} // Move back up when exiting
             transition={{
-              duration: 1,
-              ease: "easeIn",
+              duration: 1, // Increased duration for a slower animation
+              ease: "easeInOut", // Predefined easing for smoother effect
             }}
-            className="text-gray-400 text-[70px] "
+            viewport={{ once: true }}
+            className="flex justify-start items-end relative space-x-[100px]"
           >
-            05
+            <div className="inline-block relative text-end text-gray-500">
+              Our Story
+            </div>
+            <div
+              className={`uppercase text-[80px] h-[90px] ${bodoni_Moda.className}`}
+            >
+              from nail studio
+            </div>
           </motion.div>
+
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 50 }}
+            initial={{ opacity: 0, x: 100 }} // Start above the viewport
+            whileInView={{ opacity: 1, x: 0 }} // Move into view
+            exit={{ opacity: 0, x: 100 }} // Move back up when exiting
             transition={{
-              duration: 0.5,
-              ease: "easeIn",
+              duration: 1, // Increased duration for a slower animation
+              ease: "easeInOut", // Predefined easing for smoother effect
             }}
             viewport={{ once: true }}
-            className="text-[70px] font-[500] "
+            className="relative left-[40%] w-fit"
           >
-            <p> Every visit to PRO Nails & </p>
-            <p>Beauty Studio is a celebration</p>
-            <p>of you.</p>
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 50 }}
-            transition={{
-              duration: 0.5,
-              ease: "easeIn",
-              delay: 0.2,
-            }}
-            viewport={{ once: true }}
-            className="text-[16px]  flex flex-col justify-center items-center w-full"
-          >
-            <p>Your support, your loyalty, and your smiles </p>{" "}
-            <p> brought us here. Join us in this new chapter of </p>
-            <p>your beauty journey.</p>
+            <div>
+              <p className={`uppercase text-[80px] ${bodoni_Moda.className}`}>
+                to beauty cave
+              </p>
+            </div>
           </motion.div>
         </div>
+
+        {/* story list  */}
+        <div className="flex justify-center items-center w-full ">
+          <div className="block w-[1100px]">
+            {mockStories?.map((story, index) => {
+              return (
+                <SingleStory
+                  key={index}
+                  content={story.content}
+                  count={index + 1}
+                  title={story.title}
+                />
+              );
+            })}
+          </div>
+        </div>
+
+        <div className=" w-full flex justify-center items-center text-center">
+          <div className={`${bodoni_Moda.className} min-h-[200px]`}>
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              viewport={{ once: true }}
+              transition={{
+                duration: 1,
+                ease: "easeIn",
+              }}
+              className="text-gray-400 text-[70px] "
+            >
+              05
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 50 }}
+              transition={{
+                duration: 0.5,
+                ease: "easeIn",
+              }}
+              viewport={{ once: true }}
+              className="text-[70px] font-[500] "
+            >
+              <p> Every visit to PRO Nails & </p>
+              <p>Beauty Studio is a celebration</p>
+              <p>of you.</p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 50 }}
+              transition={{
+                duration: 0.5,
+                ease: "easeIn",
+                delay: 0.2,
+              }}
+              viewport={{ once: true }}
+              className="text-[16px]  flex flex-col justify-center items-center w-full"
+            >
+              <p>Your support, your loyalty, and your smiles </p>{" "}
+              <p> brought us here. Join us in this new chapter of </p>
+              <p>your beauty journey.</p>
+            </motion.div>
+          </div>
+        </div>
       </div>
-    </div>
+      {/* ui for MO  */}
+      <div className="mt-[50px] w-full xl:hidden">
+        {/* story header  */}
+        <div>
+          <motion.div
+            initial={{ opacity: 0, y: -100 }} // Start above the viewport
+            whileInView={{ opacity: 1, y: 0 }} // Move into view
+            exit={{ opacity: 0, y: -100 }} // Move back up when exiting
+            transition={{
+              duration: 1, // Increased duration for a slower animation
+              ease: "easeInOut", // Predefined easing for smoother effect
+            }}
+            viewport={{ once: true }}
+          >
+            <div
+              className={`${bodoni_Moda.className} uppercase w-full text-[35px] font-semibold `}
+            >
+              from nail studio
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 100 }} // Start above the viewport
+            whileInView={{ opacity: 1, x: 0 }} // Move into view
+            exit={{ opacity: 0, x: 100 }} // Move back up when exiting
+            transition={{
+              duration: 1, // Increased duration for a slower animation
+              ease: "easeInOut", // Predefined easing for smoother effect
+            }}
+            viewport={{ once: true }}
+            className="relative left-[20%] w-fit"
+          >
+            <div>
+              <p className={`uppercase  text-[35px] ${bodoni_Moda.className}`}>
+                to beauty cave
+              </p>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* story list  */}
+        <div className="flex justify-center items-center w-full ">
+          <div className="block w-screen px-[20px]">
+            {mockStories?.map((story, index) => {
+              return (
+                <SingleStory
+                  key={index}
+                  content={story.content}
+                  count={index + 1}
+                  title={story.title}
+                />
+              );
+            })}
+          </div>
+        </div>
+
+        <div className=" w-full flex justify-center items-center text-center">
+          <div className={`${bodoni_Moda.className} min-h-[200px] py-[20px]`}>
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              viewport={{ once: true }}
+              transition={{
+                duration: 1,
+                ease: "easeIn",
+              }}
+              className="text-gray-400 xl:text-[70px] text-[30px] "
+            >
+              05
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 50 }}
+              transition={{
+                duration: 0.5,
+                ease: "easeIn",
+              }}
+              viewport={{ once: true }}
+              className="xl:text-[70px] text-[22px] font-[500] "
+            >
+              <p> Every visit to PRO Nails & </p>
+              <p>Beauty Studio is a celebration</p>
+              <p>of you.</p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 50 }}
+              transition={{
+                duration: 0.5,
+                ease: "easeIn",
+                delay: 0.2,
+              }}
+              viewport={{ once: true }}
+              className="xl:text-[16px] flex flex-col justify-center items-center w-full"
+            >
+              <p>Your support, your loyalty, and your smiles </p>{" "}
+              <p> brought us here. Join us in this new chapter of </p>
+              <p>your beauty journey.</p>
+            </motion.div>
+          </div>
+        </div>
+      </div>
+    </>
   );
 };
 
