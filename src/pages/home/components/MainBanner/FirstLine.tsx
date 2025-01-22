@@ -7,7 +7,7 @@ const FirstLine = () => {
   return (
     <motion.div className="flex justify-between items-center">
       <motion.div
-        className={`${bodoni_Moda.className} text-[220px] relative left-[-50px] h-[230px]`}
+        className={`${bodoni_Moda.className} text-[200px] text-main_text relative left-[-50px] h-[230px]`}
         initial={{ opacity: 0, y: -100 }} // Start above the viewport
         animate={{ opacity: 1, y: 0 }} // Move into view
         exit={{ opacity: 0, y: -100 }} // Move back up when exiting
@@ -16,7 +16,7 @@ const FirstLine = () => {
           ease: "easeInOut", // Predefined easing for smoother effect
         }}
       >
-        Pro Nails
+        Hanie Nails
         <span className="text-gray-500 text-[13px]"> QuyNhon</span>
       </motion.div>
       <motion.div

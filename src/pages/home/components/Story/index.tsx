@@ -116,8 +116,8 @@ const MainStory = () => {
               viewport={{ once: true }}
               className="text-[70px] font-[500] "
             >
-              <p> Every visit to PRO Nails & </p>
-              <p>Beauty Studio is a celebration</p>
+              <p> Every visit to Hanie Nails & </p>
+              <p>Eyelash Studio is a celebration</p>
               <p>of you.</p>
             </motion.div>
             <motion.div
@@ -221,8 +221,8 @@ const MainStory = () => {
               viewport={{ once: true }}
               className="xl:text-[70px] text-[22px] font-[500] "
             >
-              <p> Every visit to PRO Nails & </p>
-              <p>Beauty Studio is a celebration</p>
+              <p> Every visit to Hanie Nails & </p>
+              <p>Eyelash Studio is a celebration</p>
               <p>of you.</p>
             </motion.div>
             <motion.div

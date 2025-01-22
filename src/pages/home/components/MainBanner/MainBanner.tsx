@@ -7,13 +7,13 @@ import BannerForMO from "./BannerForMO";
 const MainBanner = () => {
   return (
     <>
-      <div className="xl:block hidden">
+      <div className="xl:block hidden w-full">
         <FirstLine />
         <SecondLine />
         <ThirtLine />
       </div>
 
-      <div className="xl:hidden">
+      <div className="xl:hidden w-full">
         <BannerForMO />
       </div>
     </>

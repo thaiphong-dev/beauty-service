@@ -9,7 +9,7 @@ import MainStory from "./components/Story";
 
 export default function Home() {
   return (
-    <motion.div className=" min-h-screen h-full">
+    <motion.div className=" min-h-screen h-full ">
       <Header />
       <MainBanner />
       <MainStory />

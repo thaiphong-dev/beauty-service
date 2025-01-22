@@ -15,14 +15,14 @@ const ThirtLine = () => {
           duration: 1.5, // Duration for the fade effect
           ease: "easeIn", // Smooth fade effect
         }}
-        className=" text-[15px] font-[500] w-[300px]"
+        className=" text-[15px] font-[500] w-[300px] text-gray-500"
       >
-        We offer a complete range of beauty treatments for nails, hair, face and
-        body - allowing you shine even brighter
+        We specialize in premium nail and eyelash treatments, leaving you with
+        flawless nails and stunning lashes that shine with beauty.
       </motion.div>
 
       <motion.div
-        className={`${bodoni_Moda.className} text-[220px] relative right-[-50px]  h-[200px]`}
+        className={`${bodoni_Moda.className} text-[200px] relative right-[-50px]  h-[200px] text-main_text`}
         initial={{ opacity: 0, x: 100 }} // Start above the viewport
         animate={{ opacity: 1, x: 0 }} // Move into view
         exit={{ opacity: 0, x: 100 }} // Move back up when exiting

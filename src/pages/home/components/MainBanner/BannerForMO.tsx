@@ -14,10 +14,10 @@ const BannerForMO = () => {
           duration: 1, // Increased duration for a slower animation
           ease: "easeInOut", // Predefined easing for smoother effect
         }}
-        className={`${bodoni_Moda.className} text-[80px] relative text-center leading-[70px] pt-[20px]`}
+        className={`${bodoni_Moda.className} text-[60px] relative text-center leading-[70px] pt-[20px]`}
       >
-        <p>Pro Nails</p>
-        <p>&Beauty</p>
+        <p>Hanie Nails</p>
+        <p>&Eyelash</p>
         <p>Studio</p>
       </motion.div>
       <div className="flex justify-center items-center flex-col space-y-[20px] mt-[10px] text-center">

@@ -5,7 +5,7 @@ import Logo from "../Logo/Logo";
 
 const Header = () => {
   return (
-    <>
+    <div className="text-main_text">
       {/* UI for PC  */}
       <motion.div
         initial={{ opacity: 0, y: -100 }} // Start above the viewport
@@ -64,7 +64,7 @@ const Header = () => {
           duration: 1, // Increased duration for a slower animation
           ease: "easeInOut", // Predefined easing for smoother effect
         }}
-        className="xl:hidden justify-between items-start font-[700] flex border-b-[1px] border-gray-500 pb-[20px]"
+        className="xl:hidden flex justify-between items-center font-[700]  border-b-[1px] border-gray-500 pb-[20px]"
       >
         <motion.div className="cursor-pointer">
           <Logo />
@@ -77,7 +77,7 @@ const Header = () => {
           </span>
         </motion.div>
       </motion.div>
-    </>
+    </div>
   );
 };
 

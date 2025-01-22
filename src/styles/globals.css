@@ -2,13 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-margin: 0;
-padding: 0 50px;
-padding-top: 20px;
-box-sizing: border-box;
-background-color: #f5ecdd;
+
+
+@media (min-width: 768px) {
+  :root {
+    margin: 0;
+    padding: 0 50px;
+    padding-top: 20px;
+    box-sizing: border-box;
+    background-color: #f5ecdd;
+    color: #905E4E ;
+    }
 }
+
+
+
 
 @media (max-width: 768px) {
   :root {
@@ -17,6 +25,7 @@ background-color: #f5ecdd;
   margin-top: 40px;
   background-color: #f5ecdd;
   padding: 0 15px;
+  color: #905E4E ;
 
   }
 }
