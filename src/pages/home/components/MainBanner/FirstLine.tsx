@@ -27,7 +27,7 @@ const FirstLine = () => {
           duration: 1.5, // Duration for the fade effect
           ease: "easeIn", // Smooth fade effect
         }}
-        className="group border-[1px] border-black w-[150px] aspect-square rounded-full flex justify-center items-center hover:bg-black hover:text-white transition-all duration-200 cursor-pointer relative top-[70px]"
+        className="group border-[1px] border-main_text w-[150px] aspect-square rounded-full flex justify-center items-center hover:bg-main_text hover:text-white transition-all duration-200 cursor-pointer relative top-[70px]"
       >
         <div className="w-[140px] aspect-square flex justify-center items-center text-center uppercase font-[500] group-hover:border-[2px] group-hover:border-white rounded-full transition-all duration-0">
           <p>make an appointment</p>
