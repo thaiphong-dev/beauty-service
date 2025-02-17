@@ -52,7 +52,7 @@ const MenuMO = ({ isShow }: Props) => {
   ];
   return (
     <motion.div
-      className="h-screen w-full absolute top-0 left-0 z-10 bg-main pt-[40px] "
+      className="h-screen w-full absolute top-0 left-0 z-10 bg-main pt-[40px] md:hidden"
       initial={{ opacity: isShow ? 1 : 0, y: isShow ? "100%" : 0 }} // Start above the viewport
       animate={{ opacity: isShow ? 1 : 0, y: isShow ? 0 : "100%" }} // Move into view
       exit={{ opacity: 0, y: "-100%" }} // Move back up when exiting

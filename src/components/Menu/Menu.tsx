@@ -52,9 +52,17 @@ const Menu = ({ handleCloseMenu, isShow }: Props) => {
   return (
     <motion.div
       className="h-screen w-full absolute top-0 left-0 z-10 bg-main p-[30px] md:block hidden"
-      initial={{ opacity: isShow ? 1 : 0, y: isShow ? "100%" : 0 }} // Start above the viewport
-      animate={{ opacity: isShow ? 1 : 0, y: isShow ? 0 : "100%" }} // Move into view
-      exit={{ opacity: 0, y: "-100%" }} // Move back up when exiting
+      initial={{
+        opacity: isShow ? 1 : 0,
+        zIndex: isShow ? 1 : -1,
+        y: isShow ? "100%" : 0,
+      }} // Start above the viewport
+      animate={{
+        opacity: isShow ? 1 : 0,
+        zIndex: isShow ? 1 : -1,
+        y: isShow ? 0 : "100%",
+      }} // Move into view
+      exit={{ opacity: 0, zIndex: -1, y: "-100%" }} // Move back up when exiting
       transition={{
         duration: 0.5, // Increased duration for a slower animation
         ease: "easeInOut", // Predefined easing for smoother effect
@@ -94,7 +102,9 @@ const Menu = ({ handleCloseMenu, isShow }: Props) => {
                 marginRight: x?.paddingright,
               }}
             >
-              <Link href={x?.value}>{x.label}</Link>
+              <Link onClick={() => handleCloseMenu()} href={x?.value}>
+                {x.label}
+              </Link>
             </div>
           ))}
         </div>
