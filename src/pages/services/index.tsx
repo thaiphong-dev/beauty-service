@@ -1,6 +1,8 @@
 import React from "react";
 import ServiceItem from "./ServiceItem";
+import { Bodoni_Moda } from "next/font/google";
 
+const bodoni_Moda = Bodoni_Moda({ subsets: ["latin"], weight: "500" });
 const Services = () => {
   const mockmenu = [
     {
@@ -341,20 +343,24 @@ const Services = () => {
   return (
     <div>
       {/* header  */}
-      <div>
-        <div>Services</div>
-        <div>
-          <p>
-            At Lashley Studio we offer a wide range of beauty treatments
-            designed to enhance your natural beauty and help you feel your best
-          </p>
+      <div className="flex justify-between flex-col xl:flex-row items-center ">
+        <div className="w-[20%] min-w-[100px] pt-[20px] text-gray-400">
+          <p className="w-full text-center xl:text-left">Services</p>
+        </div>
+        <div
+          className={`xl:text-[100px] md:text-[80px] text-[30px] uppercase  w-full ${bodoni_Moda.className}`}
+        >
+          <p className="whitespace-nowrap xl:h-[110px]"> Total bliss from </p>
+
+          <p className="pl-[20%] whitespace-nowrap xl:h-[110px]">fingertips </p>
+          <p className="pl-[35%] whitespace-nowrap xl:h-[110px]">to eyebrows</p>
         </div>
       </div>
 
       {/* content  */}
-      <div>
-        {mockmenu?.map((x) => (
-          <div key={x?.id}>
+      <div className=" pt-[20px] xl:pt-[30px]">
+        {mockmenu?.map((x, index) => (
+          <div key={index}>
             <ServiceItem {...x} />
           </div>
         ))}

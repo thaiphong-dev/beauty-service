@@ -9,7 +9,7 @@ interface Props {
   handleCloseMenu: () => void;
   isShow: boolean;
 }
-const MenuMO = ({ isShow }: Props) => {
+const MenuMO = ({ isShow, handleCloseMenu }: Props) => {
   useScrollLock(isShow);
 
   const menuList = [
@@ -74,7 +74,9 @@ const MenuMO = ({ isShow }: Props) => {
                 marginRight: x?.paddingright,
               }}
             >
-              <Link href={x?.value}>{x.label}</Link>
+              <Link onClick={() => handleCloseMenu()} href={x?.value}>
+                {x.label}
+              </Link>
             </div>
           ))}
         </div>
